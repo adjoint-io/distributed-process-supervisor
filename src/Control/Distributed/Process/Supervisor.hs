@@ -306,6 +306,7 @@ import Control.Distributed.Process
   , unsafeWrapMessage
   , unmonitor
   , withMonitor
+  , withMonitor_
   , expect
   , unClosure
   , receiveWait
@@ -621,7 +622,7 @@ shutdownAndWait sid = do
   mPid <- resolve sid
   case mPid of
     Nothing -> return ()
-    Just p  -> withMonitor p $ do
+    Just p  -> withMonitor_ p $ do
       shutdown p
       receiveWait [ matchIf (\(ProcessMonitorNotification _ p' _) -> p' == p)
                             (\_ -> return ())
