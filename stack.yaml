@@ -8,9 +8,8 @@ packages:
   extra-dep: true
 
 extra-deps:
-- distributed-process-extras-0.3.2  # missing snapshot
-- distributed-process-async-0.2.4   # missing snapshot
-- distributed-process-systest-0.1.1 # missing prior to Jan-2017
+- distributed-process-0.7.3
+- distributed-process-extras-0.3.4  # missing snapshot
+- distributed-process-async-0.2.5   # missing snapshot
 - rematch-0.2.0.0
 
-allow-newer: true
