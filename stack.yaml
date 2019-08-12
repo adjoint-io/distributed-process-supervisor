@@ -1,10 +1,18 @@
-resolver: lts-11.13
+resolver: lts-13.11
 
 packages:
 - '.'
 
 extra-deps:
-- distributed-process-async-0.2.6
-- distributed-process-extras-0.3.5
-- distributed-process-client-server-0.2.5.1
+- git: https://github.com/adjoint-io/distributed-process-extras.git
+  commit: becdf122cbc98725283cb267db0fc5751581e261
+- git: https://github.com/adjoint-io/distributed-process-client-server.git
+  commit: 2846ac85ebd2ebbec69b597bb672692622097820
+- git: https://github.com/adjoint-io/distributed-process-async.git
+  commit: 34a5e9490073247406a06894b6b5fbf77eb44994
+- git: https://github.com/haskell-distributed/distributed-process.git
+  commit: 660d554f6acd2dba8b605c84e8fa69e45708bc14
+- git: https://github.com/adjoint-io/network-transport-tcp.git
+  commit: fda9660e55d22cb8c406331483605db057b08c0e
 - rematch-0.2.0.0
+- distributed-static-0.3.9
